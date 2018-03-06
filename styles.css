@@ -2,8 +2,18 @@ body {
 	font-family: sans-serif;
 }
 
-li {
+.todo-item {
+	display: grid;
+	grid-template-columns: 4fr 1fr;
 	user-select: none;
+	background: #bdbdbd;
+	padding: 4px;
+	transition-duration: .2s;
+}
+
+.todo-item:hover {
+	background: #efefef;
+	cursor: pointer;
 }
 
 .done {
