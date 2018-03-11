@@ -13,11 +13,12 @@ body {
     display: grid;
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 100px 100px 1fr;
+    grid-template-rows: 60px 70px 1fr;
     font-family: 'Nunito';
 }
 
 h1 {
+    font-size: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,19 +28,19 @@ h1 {
 
 #new-todo-form {
     width: 100%;
-    padding: 1rem;
+    padding: .5em;
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: .5em;
     grid-template-columns: 4fr 1fr;
     background: var(--p-dark);
 }
 
 #new-todo-form input[type=submit], #new-todo-form input[type=text] {
-    font-size: 1.5rem;
+    font-size: 1.1em;
     color: white;
     background: var(--primary);
     border: 3px solid var(--primary);
-    padding: .5rem;
+    padding: .5em;
     border-radius: 4px;
 }
 
@@ -53,19 +54,19 @@ h1 {
 }
 
 #todo-list {
-    padding: 1rem;
+    padding: .5em;
     overflow-y: scroll;
     background: var(--p-dark);
 }
 
 #todo-list li:not(:last-child) {
-    margin-bottom: .5rem; 
+    margin-bottom: .5em; 
 }
 
 #todo-list li {
     list-style: none;
-    padding: 1rem 1rem;
-    font-size: 1.5rem;
+    padding: .8em 1em;
+    font-size: 1.1em;
     border-radius: 4px;
     background: var(--p-light);
 }
