@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clear input field 
         document.querySelector('#new-todo-text-field').value = '';
 
-        // Set focus back on input field
-        document.querySelector('#new-todo-text-field').focus();
-
         // Don't submit the form; prevent the page from reloading
         return false;
     }
@@ -29,8 +26,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Remove element from list
         document.querySelector('#todo-list').removeChild(e.target);
-
-        // Set focus back on input field
-        document.querySelector('#new-todo-text-field').focus();
     });
 });
