@@ -1,29 +1,36 @@
-var add = document.getElementById("add-button");
-var input = document.getElementById("input-field");
-var wrapper = document.getElementById("item-wrapper");
+// Only execute the following code when the DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#new-todo-form').onsubmit = () => {
+        
+        // Don't allow empty todos
+        if(document.querySelector('#new-todo-text-field').value === '') return false;
 
-function addHandler() {
-	var item = document.createElement("li");
-	item.setAttribute("id", "todo-item");
-	item.innerHTML = input.value + '<i id="delete" class="fa fa-trash" aria-hidden="true"></i>';
-	input.value = "";
-	wrapper.appendChild(item);
-	console.log(item);
-}
+        // Create todo element
+        const todo = document.createElement('li');
+        todo.innerHTML = document.querySelector('#new-todo-text-field').value;
 
-input.onkeyup = function(e) {
-	if(e.keyCode === 13) {
-		addHandler();
-		console.log("Enter was entered");
-	}
-}
+        // Add element to list
+        document.querySelector('#todo-list').append(todo);
 
-wrapper.onclick = function(e) {
-	if(e.target.getAttribute("id") === "todo-item") {
-		e.target.classList.toggle("done");
-	} else {
-		wrapper.removeChild(e.target.parentElement);
-	}
-}
+        // Clear input field 
+        document.querySelector('#new-todo-text-field').value = '';
 
-add.onclick = addHandler;
+        // Set focus back on input field
+        document.querySelector('#new-todo-text-field').focus();
+
+        // Don't submit the form; prevent the page from reloading
+        return false;
+    }
+
+    document.querySelector('#todo-list').addEventListener('click', (e) => {
+        
+        // Don't attempt to remove list from itself cause that makes no sense
+        if(document.querySelector('#todo-list') === e.target) return;
+
+        // Remove element from list
+        document.querySelector('#todo-list').removeChild(e.target);
+
+        // Set focus back on input field
+        document.querySelector('#new-todo-text-field').focus();
+    });
+});
