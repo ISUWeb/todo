@@ -27,19 +27,19 @@ h1 {
 
 #new-todo-form {
     width: 100%;
-    padding: 1em;
+    padding: 1rem;
     display: grid;
-    grid-gap: 1em;
+    grid-gap: 1rem;
     grid-template-columns: 4fr 1fr;
     background: var(--p-dark);
 }
 
 #new-todo-form input[type=submit], #new-todo-form input[type=text] {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: white;
     background: var(--primary);
     border: 3px solid var(--primary);
-    padding: .5em;
+    padding: .5rem;
     border-radius: 4px;
 }
 
@@ -53,19 +53,19 @@ h1 {
 }
 
 #todo-list {
-    padding: 1em;
+    padding: 1rem;
     overflow-y: scroll;
     background: var(--p-dark);
 }
 
 #todo-list li:not(:last-child) {
-    margin-bottom: .5em; 
+    margin-bottom: .5rem; 
 }
 
 #todo-list li {
     list-style: none;
-    padding: 1em 1em;
-    font-size: 1.5em;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
     border-radius: 4px;
     background: var(--p-light);
 }
