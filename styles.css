@@ -45,7 +45,10 @@ h1 {
 }
 
 #new-todo-form input[type=submit]:focus, #new-todo-form input[type=text]:focus {
-    outline: solid var(--p-light);
+    outline: none;
+    background: var(--p-light);
+    border-color: var(--p-light);
+    color: black;
 }
 
 #new-todo-form input[type=submit] {
