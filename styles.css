@@ -10,7 +10,6 @@
 
 body {
     background: var(--p-dark);
-    overflow-y: scroll;
 }
 
 #app {
@@ -40,6 +39,7 @@ h1 {
 }
 
 #todo-list {
+    overflow-y: auto;
     padding: .5em;
 }
 
