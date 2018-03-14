@@ -1,89 +1,77 @@
 :root {
-    --primary: #424242;
-    --p-dark: #1b1b1b;
-    --p-light: #bdbdbd;
-    --p-highlight: #efefef;
+    --primary: #cfd8dc;
+    --p-dark: #263238;
+    --p-light: #eceff1;
 }
 
 * {
     box-sizing: border-box;
 }
 
+body {
+    background: var(--p-dark);
+    overflow-y: scroll;
+}
+
 #app {
     display: grid;
     height: 100vh;
-    width: 100vw;
-    grid-template-rows: 60px 70px 1fr;
+    grid-template-rows: auto auto 1fr;
     font-family: 'Nunito';
 }
 
 h1 {
+    padding: 1em;
     font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    text-align: center;
     background: var(--primary);
 }
 
 #new-todo-form {
-    width: 100%;
     padding: .5em;
-    display: grid;
-    grid-gap: .5em;
-    grid-template-columns: 4fr 1fr;
-    background: var(--p-dark);
+    text-align: center;
 }
 
-#new-todo-form input[type=submit], #new-todo-form input[type=text] {
-    font-size: 1.1em;
-    color: white;
-    background: var(--primary);
-    border: 3px solid var(--primary);
-    padding: .5em;
-    border-radius: 4px;
-}
-
-#new-todo-form input[type=submit]:focus, #new-todo-form input[type=text]:focus {
+#new-todo-form input[type=text]:focus {
     outline: none;
     background: var(--p-light);
     border-color: var(--p-light);
     color: black;
 }
 
-#new-todo-form input[type=submit] {
-    cursor: pointer;
-    transition-duration: .2s;
-}
-
 #todo-list {
     padding: .5em;
-    overflow-y: scroll;
-    background: var(--p-dark);
 }
 
-#todo-list li:not(:last-child) {
+#new-todo-form input[type=text] {
+    max-width: 30em;
+}
+
+#new-todo-form input[type=text], #todo-list li {
+    width: 100%;
+    padding: .5em 1em;
+    border: 3px solid var(--primary);
+    margin: auto;
     margin-bottom: .5em; 
+    font-size: 1.1em;
+    border-radius: 4px;
+    background: var(--primary);
 }
 
 #todo-list li {
+    max-width: 25em;
     list-style: none;
-    padding: .8em 1em;
-    font-size: 1.1em;
-    border-radius: 4px;
-    background: var(--p-light);
     animation: fall .2s;
 }
 
 #todo-list li:hover {
     cursor: pointer;
     transition-duration: .2s;
-    background: var(--p-highlight);
+    background: var(--p-light);
 }
 
 body, h1, ul {
     margin: 0;
-    padding: 0;
 }
 
 @keyframes fall {

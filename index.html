@@ -12,10 +12,9 @@
 <body>
     <div id="app">
         <h1>Todo</h1>
-        <form id="new-todo-form" v-on:submit.prevent="add">
-            <input v-model="newTodo" type="text" id="new-todo-text-field" autocomplete="off" placeholder="New todo" size="10">
-            <input type="submit" value="Add">
-        </form>
+        <div id="new-todo-form">
+            <input @keyup.enter="add" v-model="newTodo" type="text" id="new-todo-text-field" autocomplete="off" placeholder="New todo" size="10">
+        </div>
         <ul id="todo-list">
             <li v-for="todo in todos" v-on:click="del" v-bind:id="todo.id">{{ todo.text }}</li>
         </ul>
