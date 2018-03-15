@@ -27,6 +27,7 @@ h1 {
 }
 
 #new-todo-form {
+    background: var(--primary);
     padding: .5em;
     text-align: center;
 }
@@ -50,11 +51,11 @@ h1 {
 #new-todo-form input[type=text], #todo-list li {
     width: 100%;
     padding: .5em 1em;
-    border: 3px solid var(--primary);
+    border: 3px solid var(--p-light);
+    background: var(--p-light);
     margin: auto;
     font-size: 1.1em;
     border-radius: 4px;
-    background: var(--primary);
 }
 
 #todo-list li {
