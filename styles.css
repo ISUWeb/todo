@@ -1,6 +1,6 @@
 :root {
     --primary: #cfd8dc;
-    --p-dark: #263238;
+    --p-dark: #212121;
     --p-light: #eceff1;
 }
 
@@ -9,7 +9,7 @@
 }
 
 body {
-    background: var(--p-dark);
+    background: var(--primary);
 }
 
 #app {
@@ -23,11 +23,12 @@ h1 {
     padding: 1em;
     font-size: 1.2em;
     text-align: center;
-    background: var(--primary);
+    color: white;
+    background: var(--p-dark);
 }
 
 #new-todo-form {
-    background: var(--primary);
+    background: var(--p-dark);
     padding: .5em;
     text-align: center;
 }
@@ -49,6 +50,7 @@ h1 {
 }
 
 #new-todo-form input[type=text], #todo-list li {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
     width: 100%;
     padding: .5em 1em;
     border: 3px solid var(--p-light);
@@ -67,6 +69,7 @@ h1 {
 
 #todo-list li:hover {
     cursor: pointer;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
     transition-duration: .2s;
     background: var(--p-light);
 }
