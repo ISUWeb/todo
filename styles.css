@@ -44,6 +44,7 @@ h1 {
 }
 
 #new-todo-form input[type=text] {
+    font-size: 1.1em;
     max-width: 30em;
     border: 0;
 }
