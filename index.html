@@ -16,7 +16,7 @@
             <input @keyup.enter="add" v-model="newTodo" type="text" id="new-todo-text-field" autocomplete="off" placeholder="New todo" size="10">
         </div>
         <ul id="todo-list">
-            <li v-for="todo in todos" v-on:click="del" v-bind:id="todo.id">{{ todo.text }}</li>
+            <li class="scale-up-ver-top" v-for="todo in todos" v-on:click="del" v-bind:id="todo.id">{{ todo.text }}</li>
         </ul>
     </div>
     <script src="app.js"></script>
