@@ -1,7 +1,7 @@
 :root {
-    --primary: #37474f;
+    --primary: #263238;
     --p-dark: #102027;
-    --p-light: #cfd8dc;
+    --p-light: #eceff1;
 }
 
 * {
